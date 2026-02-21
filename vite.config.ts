@@ -1,7 +1,17 @@
-import { defineConfig } from 'vite'
+import { defineConfig } from 'vitest/config'
+import tailwindcss from '@tailwindcss/vite'
 import react from '@vitejs/plugin-react'
 
-// https://vite.dev/config/
 export default defineConfig({
-  plugins: [react()],
+  base: '/atm-machine/',
+  plugins: [tailwindcss(), react()],
+  test: {
+    environment: 'node',
+    include: ['src/**/*.test.ts'],
+    coverage: {
+      provider: 'v8',
+      include: ['src/utils/**'],
+      reporter: ['text', 'lcov'],
+    },
+  },
 })
