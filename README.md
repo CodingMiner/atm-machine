@@ -2,6 +2,8 @@
 
 A browser based ATM simulator built with React, TypeScript, Tailwind CSS and Vite.
 
+**Live demo:** https://codingminer.github.io/atm-machine/
+
 ## Features
 
 - Deposit and withdraw money from a single virtual account
