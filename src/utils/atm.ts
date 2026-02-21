@@ -45,6 +45,6 @@ export function validateAmount(
   balance: number
 ): string {
   const amount = inputToAmount(input);
-  if (mode === "withdraw" && amount > balance) return "Insufficient funds.";
+  if (mode === "withdraw" && amount > balance) return "Insufficient funds";
   return "";
 }

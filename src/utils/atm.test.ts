@@ -116,7 +116,7 @@ describe("withdraw", () => {
 
 describe("validateAmount", () => {
   it("returns an error for a withdrawal exceeding balance", () => {
-    expect(validateAmount("500", "withdraw", 200)).toBe("Insufficient funds.");
+    expect(validateAmount("500", "withdraw", 200)).toBe("Insufficient funds");
   });
 
   it("returns empty string for a valid deposit", () => {
