@@ -29,18 +29,22 @@ export function ATM() {
   }, [balance]);
 
   function handleDigit(digit: string) {
+    setError("");
     setInput((prev) => appendDigit(prev, digit));
   }
 
   function handleClear() {
+    setError("");
     setInput("");
   }
 
   function handleBackspace() {
+    setError("");
     setInput((prev) => removeLastDigit(prev));
   }
 
   function handleModeSelect(newMode: TransactionMode) {
+    setError("");
     setMode(newMode);
   }
 
