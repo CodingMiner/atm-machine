@@ -4,7 +4,7 @@ interface BalanceDisplayProps {
   balance: number;
 }
 
-export function BalanceDisplay({ balance }: BalanceDisplayProps) {
+export const BalanceDisplay = ({ balance }: BalanceDisplayProps) => {
   return (
     <div className="px-4 py-3 border-b border-zinc-700">
       <p className="text-xs uppercase tracking-widest text-zinc-300 mb-1">

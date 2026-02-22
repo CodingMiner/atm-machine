@@ -2,7 +2,7 @@ interface ErrorMessageProps {
   message: string;
 }
 
-export function ErrorMessage({ message }: ErrorMessageProps) {
+export const ErrorMessage = ({ message }: ErrorMessageProps) => {
   if (!message) return null;
 
   return (

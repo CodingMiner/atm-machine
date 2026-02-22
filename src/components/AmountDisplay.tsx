@@ -4,7 +4,7 @@ interface AmountDisplayProps {
   input: string;
 }
 
-export function AmountDisplay({ input }: AmountDisplayProps) {
+export const AmountDisplay = ({ input }: AmountDisplayProps) => {
   return (
     <div className="px-4 py-3">
       <p className="text-xs uppercase tracking-widest text-zinc-300 mb-1">

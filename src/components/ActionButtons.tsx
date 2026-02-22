@@ -22,12 +22,12 @@ interface ActionButtonsProps {
   confirmDisabled: boolean;
 }
 
-export function ActionButtons({
+export const ActionButtons = ({
   mode,
   onModeSelect,
   onConfirm,
   confirmDisabled,
-}: ActionButtonsProps) {
+}: ActionButtonsProps) => {
   return (
     <div className="px-4 pb-4 flex flex-col gap-3">
       <div className="grid grid-cols-2 gap-2">

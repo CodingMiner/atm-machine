@@ -13,7 +13,7 @@ import { Numpad } from "./Numpad";
 import { ActionButtons, type TransactionMode } from "./ActionButtons";
 import { ErrorMessage } from "./ErrorMessage";
 
-export function ATM() {
+export const ATM = () => {
   const [balance, setBalance] = useState(() => {
     const parsed = parseInt(localStorage.getItem("atm-balance") ?? "", 10);
     return isNaN(parsed) ? INITIAL_BALANCE : parsed;
@@ -28,27 +28,27 @@ export function ATM() {
     localStorage.setItem("atm-balance", String(balance));
   }, [balance]);
 
-  function handleDigit(digit: string) {
+  const handleDigit = (digit: string) => {
     setError("");
     setInput((prev) => appendDigit(prev, digit));
-  }
+  };
 
-  function handleClear() {
+  const handleClear = () => {
     setError("");
     setInput("");
-  }
+  };
 
-  function handleBackspace() {
+  const handleBackspace = () => {
     setError("");
     setInput((prev) => removeLastDigit(prev));
-  }
+  };
 
-  function handleModeSelect(newMode: TransactionMode) {
+  const handleModeSelect = (newMode: TransactionMode) => {
     setError("");
     setMode(newMode);
-  }
+  };
 
-  function handleConfirm() {
+  const handleConfirm = () => {
     const validationError = validateAmount(input, mode, balance);
     if (validationError) {
       setError(validationError);
@@ -64,7 +64,7 @@ export function ATM() {
     }
 
     setInput("");
-  }
+  };
 
   return (
     <div className="w-full max-w-sm rounded-2xl border border-zinc-700 bg-zinc-900 shadow-2xl">

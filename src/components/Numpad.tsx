@@ -6,7 +6,7 @@ interface NumpadProps {
 
 const DIGIT_KEYS = ["1", "2", "3", "4", "5", "6", "7", "8", "9"];
 
-export function Numpad({ onDigit, onClear, onBackspace }: NumpadProps) {
+export const Numpad = ({ onDigit, onClear, onBackspace }: NumpadProps) => {
   return (
     <div className="grid grid-cols-3 gap-2 p-4">
       {DIGIT_KEYS.map((digit) => (
